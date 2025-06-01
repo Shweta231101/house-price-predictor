@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>Predict House Price</h1>
+    <form method="POST">
+        <label>Median Income (MedInc):</label><br>
+        <input type="number" step="any" name="MedInc" required><br><br>
+        
+        <label>House Age (HouseAge):</label><br>
+        <input type="number" step="any" name="HouseAge" required><br><br>
+        
+        <label>Average Rooms (AveRooms):</label><br>
+        <input type="number" step="any" name="AveRooms" required><br><br>
+        
+        <label>Average Bedrooms (AveBedrms):</label><br>
+        <input type="number" step="any" name="AveBedrms" required><br><br>
+        
+        <label>Population:</label><br>
+        <input type="number" step="any" name="Population" required><br><br>
+        
+        <label>Average Occupants (AveOccup):</label><br>
+        <input type="number" step="any" name="AveOccup" required><br><br>
+        
+        <label>Latitude:</label><br>
+        <input type="number" step="any" name="Latitude" required><br><br>
+        
+        <label>Longitude:</label><br>
+        <input type="number" step="any" name="Longitude" required><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if prediction is not none %}
+        <h2>Predicted House Price: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
